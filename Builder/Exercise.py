@@ -1,27 +1,24 @@
 class CodeBuilder:
     def __init__(self, root_name):
-        # todo
-        self.root_name = root_name
-        self.fields={}
+        self._root = root_name
+        self.fields = {}
 
     def add_field(self, type, name):
-        # todo
         self.fields[type]=name
         return self
 
     def __str__(self):
-        # todo
-        root_indentation = 2
         lines = []
-        lines.append(f'class {self.root_name}:')
-        indent = " " * (root_indentation)
-        if len(self.fields)!=0:
-            lines.append(f'{indent}def __init__(self):')
+        lines.append(f"class {self._root}:")
+        indent_size = "  "
+        indent = indent_size * 1
+        if len(self.fields)>0:
+            lines.append(indent+"def __init__(self):")
         else:
-            lines.append(f'{indent}pass')
-        indent = " " * (root_indentation*(2))
-        for idx,(key,value) in enumerate(self.fields.items()):
-            lines.append(f'{indent}self.{key} = {value}')
+            lines.append(indent+"pass")
+        indent = indent_size * 2
+        for key,value in self.fields.items():
+            lines.append(indent+f"self.{key} = {value}")
         return "\n".join(lines)
 
 if __name__=="__main__":
