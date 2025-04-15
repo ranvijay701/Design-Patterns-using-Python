@@ -43,13 +43,18 @@
 ### Composite
 `Study more not clear`
 ### Decorator
+`Decorator pattern is used when we have a class and we want to add some extra features. These features are added at run time.`
+`Decorators add temporary features but Inheritance add decorator is temporay in nature. Decorator keeps the codebase more organised and elegant.`
 ### Facade
+`In the the Facade design pattern we hide the details of implementation and provide a use to api to work with.`
 ### Flyweight
+`In the this design pattern we try to reduce the memory usage. It is similar to normalised form of database design.`
 ### Proxy
-
+`We can use proxy design pattern to add extra features. It acts as intermediary and extend the functionality.`
 ## Behavioral Patterns
 `They are all different; no central theme`
 ### Chain of Responsibility
+`In the chain of responsibility design pattern we have different handlers which does some tasks and pass the control to the next handler`
 ### Command
 ### Iterator
 ### Mediator
